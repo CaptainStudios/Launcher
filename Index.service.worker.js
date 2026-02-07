@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1770482787|2030263395';
+const CACHE_VERSION = '1770482932|2175173042';
 /** @type {string} */
 const CACHE_PREFIX = 'GameLauncher-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
@@ -17,7 +17,7 @@ const ENSURE_CROSSORIGIN_ISOLATION_HEADERS = true;
 const CACHED_FILES = ["Index.html","Index.js","Index.offline.html","Index.icon.png","Index.apple-touch-icon.png","Index.audio.worklet.js","Index.audio.position.worklet.js"];
 // Files that we might not want the user to preload, and will only be cached on first load.
 /** @type {string[]} */
-const CACHEABLE_FILES = ["Index.wasm","Index.pck"];
+const CACHEABLE_FILES = ["Index.wasm","Index.pck","Index.side.wasm"];
 const FULL_CACHE = CACHED_FILES.concat(CACHEABLE_FILES);
 
 self.addEventListener('install', (event) => {
